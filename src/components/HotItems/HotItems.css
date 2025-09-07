@@ -1,0 +1,226 @@
+.hot-items {
+    padding: 3rem 2rem;
+    background: #0d0d0d;
+    text-align: center;
+}
+
+.hot-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.hot-subtitle {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+/* карточка */
+.product-card {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.card-like,
+.product-img,
+.product-name,
+.card-footer,
+.arrow-btn {
+    position: relative;
+    z-index: 1;
+    /* поверх SVG */
+}
+
+.product-img {
+    width: 85%;
+    max-height: 241px;
+    object-fit: contain;
+    margin: 2rem auto 1rem auto;
+}
+
+/* ТОЛЬКО бургеры — отпущены ниже */
+.product-card.burger .product-img {
+    margin-top: 6.5rem;
+}
+
+.card-like {
+    position: absolute;
+    top: 16px;
+    right: 116px;
+    background: none;
+    border: none;
+    font-size: 2.1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.product-name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 111%;
+    color: white;
+    margin-bottom: 1rem;
+
+}
+
+.product-card.burger .product-name {
+    margin-top: -4.8rem;
+    /* подними вверх */
+}
+
+.card-footer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.slider__cart-btn {
+    position: relative;
+    left: -9dvh;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.slider__cart-btn img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    display: block;
+}
+
+.price {
+    position: relative;
+    left: 7dvh;
+}
+
+.arrow-btn {
+    position: absolute;
+    bottom: 0;
+    right: 90px;
+    border: none;
+    background: transparent;
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* swiper стрелки */
+.swiper-button-prev,
+.swiper-button-next {
+    background: #e27815;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* дотсы */
+.swiper-pagination {
+    margin-top: 1rem;
+    display: none;
+}
+
+@media (min-width: 1900px) and (max-width: 3500px) {
+    .card-like {
+        right: 160px;
+    }
+
+    .price {
+        left: 12dvh;
+    }
+
+    .slider__cart-btn {
+        left: -11dvh;
+    }
+
+    .arrow-btn {
+        right: 160px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .swiper-pagination {
+        display: block;
+
+    }
+
+    .slider__cart-btn {
+        left: -2dvh;
+    }
+
+    .arrow-btn {
+        right: 20px;
+    }
+
+    .card-like {
+        right: 46px;
+    }
+
+}
+
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* первые 4 карточки — бургеры */
+.swiper-slide:nth-child(-n+4) .product-img {
+    margin-top: 6.5rem;
+    width: 95%;
+    max-height: 270px;
+}
+
+.swiper-slide:nth-child(-n+4) .product-name {
+    margin-top: -4.8rem;
+
+}
+
+/* напитки (с 5-го элемента и дальше) */
+.swiper-slide:nth-child(n+5) .product-img {
+    margin-top: 5rem;
+    width: 75%;
+    max-height: 220px;
+}
+
+.swiper-slide:nth-child(n+5) .product-name {
+    margin-top: 0rem;
+
+}

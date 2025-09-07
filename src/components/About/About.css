@@ -1,0 +1,103 @@
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about__content {
+    flex: 1;
+    color: #fff;
+}
+
+.about__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 120px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    left: 44dvh;
+}
+
+.about__content p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about__content span {
+    color: #f47200;
+    font-weight: 700;
+}
+
+.about__media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    margin-top: 15dvh;
+}
+
+
+
+
+@media (min-width: 1900px) and (max-width: 3500px) {
+    .about__title {
+        left: 35dvh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+        flex-direction: column;
+        padding: 60px 40px;
+        text-align: center;
+    }
+
+    .about__title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .about__content p {
+        font-size: 18px;
+    }
+
+    .about__video {
+        max-width: 500px;
+        margin-top: 20px;
+    }
+}
+
+/* Мобилки */
+@media (max-width: 768px) {
+    .about {
+        padding: 40px 20px;
+    }
+
+    .about__title {
+        font-size: 26px;
+        margin-bottom: 20px;
+        left: 1px;
+    }
+
+    .about__content p {
+        font-size: 16px;
+    }
+
+    .about__video {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}

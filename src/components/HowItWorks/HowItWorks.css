@@ -1,0 +1,137 @@
+.how-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, #111, #1a1a1a);
+    color: #fff;
+}
+
+.how-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 6rem;
+    flex-wrap: wrap;
+    /* ✅ чтобы на мобилках элементы переносились */
+}
+
+.how-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.how-svg {
+    width: 120px;
+    position: relative;
+    top: 10px;
+    /* ✅ вместо dvh */
+}
+
+.how-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.how-card {
+    background: linear-gradient(180deg, #fff 0%, #ff7a04 100%);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 340px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.how-card:hover {
+    transform: translateY(-8px);
+}
+
+.how-icon {
+    width: 80px;
+    height: 80px;
+    margin: -40px auto 1rem;
+    position: relative;
+    top: -6dvh;
+    background: #ff7a04;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.how-card h3 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+.how-card p {
+    color: #f2f2f2;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.arrow__how-btn {
+    border: none;
+    background: none;
+    font-size: 1.6rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+}
+
+.arrow__how-btn:hover {
+    transform: translate(-50%, -3px);
+}
+
+/* 📱 Адаптив */
+@media (min-width: 1900px) and (max-width: 3500px) {
+    .how-cards {
+        gap: 12rem;
+    }
+
+    .how-header {
+        margin-left: 160px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .how-cards {
+        gap: 6rem;
+    }
+
+    .how-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .how-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .how-svg {
+        width: 90px;
+        top: 0;
+        left: 0;
+    }
+}
